@@ -6,27 +6,36 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/17 21:54:01 by sshakya           #+#    #+#             */
-/*   Updated: 2020/12/18 23:26:06 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/12/19 08:13:40 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
-int main (void)
+int			main (void)
 {
 	t_flags flags;
 	char	*teststr;
 
-	teststr = "%0-50";
-
+	teststr = "%0-50.50*thisisatest";
 	flags = *ft_setflags(teststr, &flags);
+
+	printf("-----------------------------\n");
+	printf("--- TESTING FT_SETLIST ---\n");
+	printf("-----------------------------\n");
 	
-	printf("left[-]   = %d\n",flags.left);
-	printf("zero[0]   = %d\n",flags.zero);
-	printf("fwidth[]  = %d\n",flags.fwidth);
-	printf("precision = %d\n",flags.precision);
-	printf("pwidth[]  = %d\n",flags.pwidth);
-	printf("str = %s\n", teststr);
+	printf("-----------------------------\n");
+	printf("         %s\n", teststr);
+	printf("-----------------------------\n");
+	
+	printf("     left[-] = %d\n",flags.left);
+	printf("     zero[0] = %d\n",flags.zero);
+	printf(" asterisk[*] = %d\n",flags.asterisk);
+	printf("   fwidth[ ] = %d\n",flags.fwidth);
+	printf("precision[ ] = %d\n",flags.precision);
+	printf("   pwidth[ ] = %d\n",flags.pwidth);
+	
+	return (0);
 }
 
 

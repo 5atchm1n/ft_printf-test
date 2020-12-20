@@ -6,37 +6,11 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 01:23:08 by sshakya           #+#    #+#             */
-/*   Updated: 2020/12/19 06:05:03 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/12/20 03:58:11 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-
-static char		ts_flagchar(int n)
-{
-	char	c;
-	char	*flag;
-
-	flag = "%cspidux";
-
-	c = flag[n];
-
-	return (c);
-}
-
-void	ft_clearlst(t_pfdata *head)
-{
-	t_pfdata	*lst;
-	t_pfdata	*tmp;
-
-	lst = head;
-	while (lst != NULL)
-	{
-		tmp = lst->next;
-		free(lst);
-		lst = tmp;
-	}
-}
+#include "../ft_printf.h"
 
 int				main (void)
 {
@@ -75,7 +49,7 @@ int				main (void)
 		printf("[%d] = %s\n", i + 1, tab[i]);
 		i++;
 
-		printf("\n   format  [%c]\n", ts_flagchar(res->format));
+		printf("\n   format  [%c]\n", res->format);
 		printf("  flag[-] = %d\n", res->flags.left);
 		printf("  flag[0] = %d\n", res->flags.zero);
 		printf("  flag[w] = %d\n", res->flags.fwidth);
@@ -88,7 +62,7 @@ int				main (void)
 	}
 	printf("[%d] = %s\n", i + 1, tab[i]);
 
-	printf("\n    format  [%c]\n", ts_flagchar(res->format));
+	printf("\n    format  [%c]\n", res->format);
 	printf("  flag [-] = %d\n", res->flags.left);
 	printf("  flag [0] = %d\n", res->flags.zero);
 	printf("  flag [w] = %d\n", res->flags.fwidth);

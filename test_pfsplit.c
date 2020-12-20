@@ -6,11 +6,11 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/15 08:26:04 by sshakya           #+#    #+#             */
-/*   Updated: 2020/12/18 06:09:32 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/12/19 06:44:45 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int main(void)
 {
