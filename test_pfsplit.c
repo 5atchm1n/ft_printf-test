@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/15 08:26:04 by sshakya           #+#    #+#             */
-/*   Updated: 2020/12/19 06:44:45 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/05 05:01:33 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main(void)
     teststr = "%010zu this is a testX%-10.1 another testX%%test%cX";
 	
 	printf("----------------------------------\n");
-	test = ft_pfsplit(teststr);
+	test = pf_split(teststr);
 	printf("%s\n", teststr);
 	
 	printf("----------------------------------\n");
@@ -44,7 +44,7 @@ int main(void)
 	teststr = "%%rdmtest%%%%%%";
 	
 	printf("----------------------------------\n");
-	test = ft_pfsplit(teststr);
+	test = pf_split(teststr);
 	printf("%s\n", teststr);
 	
 	printf("----------------------------------\n");
@@ -66,7 +66,7 @@ int main(void)
 	teststr = "%50withstuff%kll";
 	
 	printf("----------------------------------\n");
-	test = ft_pfsplit(teststr);
+	test = pf_split(teststr);
 	printf("%s\n", teststr);
 	printf("----------------------------------\n");
 	if (test == NULL)

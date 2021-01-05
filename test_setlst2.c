@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 01:23:08 by sshakya           #+#    #+#             */
-/*   Updated: 2020/12/20 05:43:36 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/05 07:13:53 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ int				main (void)
 	t_pfdata	*res2;
 
 	i = 0;
-	test1 = "%0#.10utest1%-10*.*ctest2%%test3";
-	test2 = "%-.10utest1%0*.*ctest2%c";
+	test1 = "%0#.10utest1%-10.*ctest2%%test3";
+	test2 = "%-*.*10utest1%0*.ctest2%c";
 
 	printf("--------------------------------------------------\n");
 	printf("------- TEST STRING ------------------------------\n"); 
@@ -41,8 +41,8 @@ int				main (void)
 	
 	//creating table from string
 	
-	tab1 = ft_pfsplit(test1);
-	tab2 = ft_pfsplit(test2);
+	tab1 = pf_split(test1);
+	tab2 = pf_split(test2);
 	
 	if (tab1 == NULL || tab2 == NULL)
 	{
@@ -50,8 +50,8 @@ int				main (void)
 		return (0);
 	}
 	//creating list from table
-	res1 = ft_pfsetlist(tab1);
-	res2 = ft_pfsetlist(tab2);
+	res1 = pf_setlist(tab1, 99, 98);
+	res2 = pf_setlist(tab2, 100, 97, 96);
 	
 	i = 0;
 
@@ -100,7 +100,7 @@ int				main (void)
 
 	printf("--------------------------------------------------\n");
 	printf("    format  [%c]", res1->format);
-	printf("       ||   format  [%c]\n", res2->format);
+	printf("       ||    format  [%c]\n", res2->format);
 	printf("  flag [-] = %-*d||", k, res1->flags.left);
 	printf("  flag [-] = %-*d\n", k, res2->flags.left);
 	printf("  flag [0] = %-*d||", k, res1->flags.zero);
@@ -131,8 +131,8 @@ int				main (void)
 	free(tab2);
 
 	//free list
-	ft_clearlst(res1->head);
-	ft_clearlst(res2->head);
+	pf_clearlst(res1->head);
+	pf_clearlst(res2->head);
 
 	return (0);
 }
