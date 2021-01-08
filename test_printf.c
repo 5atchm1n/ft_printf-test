@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2020/12/19 09:28:05 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/07 20:56:28 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,16 @@ int		main(void)
 	printf(str, n);
 	printf("||\n");
 	printf("-----------------------------\n");
-	str = "%-10#x";
+	str = "%#x%010n";
+	n = 10;
+	int t;
+	printf("format ||%7s ", str);
+	printf("||");
+	printf(str, n, &t);
+	printf("|| n = %d", t);
+	printf("||\n");
+	printf("-----------------------------\n");
+str = "%-10#x";
 	n = 10;
 	printf("       ||%7s ", str);
 	printf("||");

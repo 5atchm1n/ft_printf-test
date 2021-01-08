@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/17 21:54:01 by sshakya           #+#    #+#             */
-/*   Updated: 2020/12/19 08:13:40 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/05 07:28:25 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int			main (void)
 	char	*teststr;
 
 	teststr = "%0-50.50*thisisatest";
-	flags = *ft_setflags(teststr, &flags);
+	flags = *pf_setflags(teststr, &flags);
 
 	printf("-----------------------------\n");
 	printf("--- TESTING FT_SETLIST ---\n");
