@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 01:23:08 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/06 10:50:10 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/09 01:04:33 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int				main (void)
 	t_pfdata	*res2;
 
 	i = 0;
-	test1 = "%0#.10utest1%-10.*ctest2%%test3";
+	test1 = "%0#*.10dtest1%-5.ctest2%%test3";
 	//test2 = "%-*.*10utest1%0*.ctest2%s";
-	test2 = "%-10.10stest1%0.ctest2%d";
+	test2 = "%-10.11stest1%0.ctest2%d";
 
 	printf("--------------------------------------------------\n");
 	printf("------- TEST STRING ------------------------------\n"); 
@@ -47,11 +47,11 @@ int				main (void)
 
 	char	*s1;
 	char	ch1;
-	int		w;
+	int		num;
 
 	s1 = "testing123";
 	ch1 = 'z';
-	w = 100;
+	num = 100;
 
 	if (tab1 == NULL || tab2 == NULL)
 	{
@@ -59,8 +59,8 @@ int				main (void)
 		return (0);
 	}
 	//creating list from table
-	res1 = pf_setlist(tab1, w, 99, ch1);
-	res2 = pf_setlist(tab2, s1, ch1, w);
+	res1 = pf_setlist(tab1, 42, num, 456 ,ch1);
+	res2 = pf_setlist(tab2, s1, ch1, num);
 
 	i = 0;
 
