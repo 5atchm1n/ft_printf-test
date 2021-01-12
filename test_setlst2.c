@@ -59,7 +59,7 @@ int				main (void)
 		return (0);
 	}
 	//creating list from table
-	res1 = pf_setlist(tab1, 42, num, 456 ,ch1);
+	res1 = pf_setlist(tab1, 42, num,ch1);
 	res2 = pf_setlist(tab2, s1, ch1, num);
 
 	i = 0;
