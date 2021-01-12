@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 01:23:08 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/09 01:04:33 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/09 04:19:09 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int				main (void)
 	t_pfdata	*res2;
 
 	i = 0;
-	test1 = "%0#*.10dtest1%-5.ctest2%%test3";
+	test1 = "%0#*.10dtest1%-5*.ctest2%%test3";
 	//test2 = "%-*.*10utest1%0*.ctest2%s";
 	test2 = "%-10.11stest1%0.ctest2%d";
 
