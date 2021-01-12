@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 13:38:44 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/12 16:43:12 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/13 00:28:48 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,34 +16,53 @@
 int		main(void)
 {
 	char	*fstr;
-//	char	*tstr;
+	char	*tstr;
 //	char	ch;
 	int		num;
 //	int		w;
 //	int		p;
 
-	num = 12345678;
-	fstr = "%010i this is a test %010i another test\n";
+	num = -1234567;
+	fstr = "%+10i|retstr1|%010i|retstr2|";
+	tstr = "returnstring1";
 	printf("-------------------------------------------\n");
-	printf("format = %s",fstr);
-	printf("-------------------------------------------\n");
-	ft_printf(fstr, num, num);
-	printf("-------------------------------------------\n");
-	fstr = "%d this is a test %d another test\n";
-	printf("format = %s",fstr);
+	printf("format =|%s|i = %i|\n",fstr, num);
 	printf("-------------------------------------------\n");
 	ft_printf(fstr, num, num);
+	printf("\n-------------------------------------------\n");
+	num = 1234567;
+	fstr = "%+10i|retstr1|%-10i|retstr2|";
 	printf("-------------------------------------------\n");
-	fstr = "%#x this is a test %#x another test\n";
-	printf("format = %s",fstr);
-	printf("-------------------------------------------\n");
-	ft_printf(fstr, num, num);
-	fstr = "%-10x this is a test %-10x another test\n";
-	printf("-------------------------------------------\n");
-	printf("format = %s",fstr);
+	printf("format =|%s|i = %i|\n",fstr, num);
 	printf("-------------------------------------------\n");
 	ft_printf(fstr, num, num);
-	printf("-------------------------------------------\n");
+	printf("\n-------------------------------------------\n");
+	fstr = "%*d|retstr1|%.12d|retstr2|";
+	printf("format = %s",fstr);
+	printf("\n-------------------------------------------\n");
+	ft_printf(fstr, 12, num, num);
+	printf("\n-------------------------------------------\n");
+	fstr = "%#x|check|%#x|check|";
+	printf("format = %s|",fstr);
+	printf("\n-------------------------------------------\n");
+	ft_printf(fstr, num, num);
+	printf("\n-------------------------------------------\n");
+	fstr = "%-10x|retstr1|%10x|retstr2|";
+	printf("format = %s",fstr);
+	printf("\n-------------------------------------------\n");
+	ft_printf(fstr, num, num);
+	printf("\n-------------------------------------------\n");
+	printf("\n-------------------------------------------\n");
+	fstr = "%s|%20s|%.9s";
+	printf("format = %s|",fstr);
+	printf("\n-------------------------------------------\n");
+	ft_printf(fstr, tstr, tstr, tstr);
+	printf("\n-------------------------------------------\n");
+	fstr = "%10.5s|%-20s|%s";
+	printf("format = %s|",fstr);
+	printf("\n-------------------------------------------\n");
+	ft_printf(fstr, tstr, tstr, tstr);
+	printf("\n-------------------------------------------\n");
 
 	return (0);
 }
