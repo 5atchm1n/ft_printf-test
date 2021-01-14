@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 13:38:44 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/13 00:28:48 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/14 00:52:02 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		main(void)
 //	int		p;
 
 	num = -1234567;
-	fstr = "%+10i|retstr1|%010i|retstr2|";
+	fstr = "%10i|retstr1|%010i|retstr2|";
 	tstr = "returnstring1";
 	printf("-------------------------------------------\n");
 	printf("format =|%s|i = %i|\n",fstr, num);
