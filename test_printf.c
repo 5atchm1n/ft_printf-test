@@ -6,11 +6,13 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/14 02:12:08 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/14 17:40:05 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "../ft_printf.h"
+
 int			main(void)
 {
 	char	*str;
@@ -253,7 +255,7 @@ str = "%-15.15d";
 	printf("----------------------------------------------\n");
 // 1
 	i++;
-	str = "%-10p";
+	str = "%-15p";
 	n = 10;
 	printf(" %d ||%10s ", i, str);
 	printf("||");
@@ -262,7 +264,7 @@ str = "%-15.15d";
 // 2
 	printf("----------------------------------------------\n");
 	i++;
-	str = "%010p";
+	str = "%015p";
 	n = 123456789;
 	printf(" %d ||%10s ", i, str);
 	printf("||");
@@ -280,13 +282,36 @@ str = "%-15.15d";
 // 4
 	printf("----------------------------------------------\n");
 	i++;
-	str = "%19p";
+	str = "%19.15p";
 	n = 10;
 	printf(" %d ||%10s ", i, str);
 	printf("||");
 	printf(str, &n);
 	printf("||\n");
+// 4
 	printf("----------------------------------------------\n");
+	i++;
+	str = "%19.7p";
+	n = 10;
+	printf(" %d ||%10s ", i, str);
+	printf("||");
+	printf(str, &n);
+	printf("||\n");
+
+	printf("----------------------------------------------\n");
+	printf("size of intmax_t = %ju\n", sizeof(intmax_t));
+	printf("size of intptr_t = %ju\n", sizeof(intptr_t));
+	printf("size of uintptr_t = %ju\n", sizeof(uintptr_t));
+	printf("size of uintmax_t = %ju\n", sizeof(uintmax_t));
+	printf("size of int8_t = %ju\n", sizeof(int8_t));
+	printf("size of int16_t = %ju\n", sizeof(int16_t));
+	printf("size of int32_t = %ju\n", sizeof(int32_t));
+	printf("size of int64_t = %ju\n", sizeof(int64_t));
+	printf("size of int = %lu\n", sizeof(int));
+	printf("size of long = %ju\n", sizeof(long));
+	printf("size of long long = %ju\n", sizeof(long long));
+	printf("size of ulong = %ju\n", sizeof(unsigned long));
+	printf("size of ulong long = %ju\n", sizeof(unsigned long long));
 
 /*
 	printf("----------------------------------------------\n");

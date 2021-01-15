@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 01:23:08 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/09 04:19:09 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/14 23:24:27 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int				main (void)
 	t_pfdata	*res2;
 
 	i = 0;
-	test1 = "%0#*.10dtest1%-5*.ctest2%%test3";
+	test1 = "%0#*.10ddtest1%-5*.ctest2%%test3";
 	//test2 = "%-*.*10utest1%0*.ctest2%s";
-	test2 = "%-10.11stest1%0.ctest2%d";
+	test2 = "%-10.11stest1%0.ctest2%il";
 
 	printf("--------------------------------------------------\n");
 	printf("------- TEST STRING ------------------------------\n"); 
@@ -59,7 +59,7 @@ int				main (void)
 		return (0);
 	}
 	//creating list from table
-	res1 = pf_setlist(tab1, 42, num,ch1);
+	res1 = pf_setlist(tab1, 42, num, 42,ch1);
 	res2 = pf_setlist(tab2, s1, ch1, num);
 
 	i = 0;
@@ -96,6 +96,11 @@ int				main (void)
 		printf("  flag [.] = %-*d\n", k, res2->flags.precision);
 		printf("  flag [w] = %-*d||", k, res1->flags.pwidth);
 		printf("  flag [w] = %-*d\n", k, res2->flags.pwidth);
+		printf("  flag [s] = %-*d||", k, res1->flags.shrt);
+		printf("  flag [s] = %-*d\n", k, res2->flags.shrt);
+		printf("  flag [l] = %-*d||", k, res1->flags.lng);
+		printf("  flag [l] = %-*d\n", k, res2->flags.lng);
+
 		printf("  string = %-*s", l, res1->str);
 		printf("||  string = %s\n", res2->str);
 		//print out args res1
@@ -134,6 +139,10 @@ int				main (void)
 	printf("  flag [0] = %-*d\n", k, res2->flags.zero);
 	printf("  flag [#] = %-*d||", k, res1->flags.hash);
 	printf("  flag [#] = %-*d\n", k, res2->flags.hash);
+	printf("  flag [+] = %-*d||", k, res1->flags.plus);
+	printf("  flag [+] = %-*d\n", k, res2->flags.plus);
+	printf("  flag [ ] = %-*d||", k, res1->flags.space);
+	printf("  flag [ ] = %-*d\n", k, res2->flags.space);
 	printf("  flag [*] = %-*d||", k, res1->flags.asterisk);
 	printf("  flag [*] = %-*d\n", k, res2->flags.asterisk);
 	printf("  flag [w] = %-*d||", k, res1->flags.fwidth);
@@ -142,6 +151,10 @@ int				main (void)
 	printf("  flag [.] = %-*d\n", k, res2->flags.precision);
 	printf("  flag [w] = %-*d||", k, res1->flags.pwidth);
 	printf("  flag [w] = %-*d\n", k, res2->flags.pwidth);
+	printf("  flag [s] = %-*d||", k, res1->flags.shrt);
+	printf("  flag [s] = %-*d\n", k, res2->flags.shrt);
+	printf("  flag [l] = %-*d||", k, res1->flags.lng);
+	printf("  flag [l] = %-*d\n", k, res2->flags.lng);
 	printf("  string = %-*s", l, res1->str);
 	printf("||  string = %s\n", res2->str);
 	//print out args res1
