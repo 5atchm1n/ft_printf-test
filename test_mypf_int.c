@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_final.c                                       :+:      :+:    :+:   */
+/*   test_mypf_int.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/16 01:49:20 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/17 04:46:06 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int			main(void)
 	int		i;
 	
 	ft_printf("----------------------------------------------\n");
-	ft_printf("-------- TESTING PRINTF RETURN ---------------\n");
+	ft_printf("-------- TESTING FT_PRINTF RETURN ------------\n");
 	ft_printf("----------------------------------------------\n");
 	
 	o = "output";
@@ -217,125 +217,6 @@ int			main(void)
 	ft_printf("||");
 	ft_printf(str, u);
 	ft_printf("||\n");
-	i++;
-/*
-	// TESTING STRING FLAGS
 	ft_printf("----------------------------------------------\n");
-	ft_printf("\tTESTING STRING FLAGS\n");
-	ft_printf("----------------------------------------------\n");
-	ft_printf("   || %-*s", wd, f);
-	ft_printf("||%s\n", o);
-	ft_printf("----------------------------------------------\n");
-	i = 1;
-	test = "123456789";
-	n = 5;
-	str = "%*s";
-	ft_printf(" %d ||%10s ", i, str);
-	ft_printf("||");
-	ft_printf(str, n, test);
-	ft_printf("||\n");
-// 2
-	ft_printf("----------------------------------------------\n");
-	i++;
-	str = "%.*s";
-	ft_printf(" %d ||%10s ", i, str);
-	ft_printf("||");
-	ft_printf(str, n, test);
-	ft_printf("||\n");
-// 3
-	ft_printf("----------------------------------------------\n");
-	i++;
-	str = "%-.14s";
-	ft_printf(" %d ||%10s ", i, str);
-	ft_printf("||");
-	ft_printf(str, test);
-	ft_printf("||\n");
-
-// 4
-	ft_printf("----------------------------------------------\n");
-	i++;
-	str = "%-14s";
-	ft_printf(" %d ||%10s ", i, str);
-	ft_printf("||");
-	ft_printf(str, test);
-	ft_printf("||\n");
-// 5
-	ft_printf("----------------------------------------------\n");
-	i++;
-	str = "%14.5s";
-	ft_printf(" %d ||%10s ", i, str);
-	ft_printf("||");
-	ft_printf(str, test);
-	ft_printf("||\n");
-// 6
-	ft_printf("----------------------------------------------\n");
-	i++;
-	str = "%-14.5s";
-	ft_printf(" %d ||%10s ", i, str);
-	ft_printf("||");
-	ft_printf(str, test);
-	ft_printf("||\n");
-*/
-/*
-	ft_printf("----------------------------------------------\n");
-	ft_printf("\tTESTING N COUNTER\n");
-	printf("----------------------------------------------\n");
-	printf("   || %-*s", wd, f);
-	printf("||%s\n", o);
-	printf("----------------------------------------------\n");
-
-// TESTING HOW TO USE %n flag
-
-	i = 1;
-	str = "%#x%010n";
-	n = 10;
-	int t;
-	printf(" %d ||%10s ", i, str);
-	printf("||");
-	printf(str, n, &t);
-	printf("|| n = %d", t);
-	printf("||\n");
-// 2
-	printf("----------------------------------------------\n");
-	i++;
-	str = "%010i%n";
-	n = 256;
-	printf(" %d ||%10s ", i, str);
-	printf("||");
-	printf(str, n, &t);
-	printf("|| n = %d", t);
-	printf("||\n");
-// 2
-	printf("----------------------------------------------\n");
-	i++;
-	str = "%-010i%n";
-	n = 256;
-	printf(" %d ||%10s ", i, str);
-	printf("||");
-	printf(str, n, &t);
-	printf("|| n = %d", t);
-	printf("||\n");
-// 3
-	printf("----------------------------------------------\n");
-	i++;
-	str = "%10i%n";
-	n = 256;
-	printf(" %d ||%10s ", i, str);
-	printf("||");
-	printf(str, n, &t);
-	printf("|| n = %d", t);
-	printf("||\n");
-// 4
-	printf("----------------------------------------------\n");
-
-// ERROR TEST	
-	str = "%-10#x";
-	n = 10;
-	printf("       ||%10s ", str);
-	printf("||");
-	printf(str, n);
-	printf("|| defaults to str ?\n");
-	printf("-----------------------------------\n");
-*/
 	return (0);
 }

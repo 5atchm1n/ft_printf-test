@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/17 01:06:50 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/17 04:19:53 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 int			main(void)
 {
 	char	*str;
-//	char	*test;
+	char	*test;
 	char	*o;
 	char	*f;
 	int		wd;
-//	int		n;
+	int		n;
 	int		i;
 	printf("----------------------------------------------\n");
 	printf("-------- TESTING PRINTF RETURN ---------------\n");
@@ -29,7 +29,7 @@ int			main(void)
 	f ="format";
 	wd = 10;
 	i = 0;
-/*	printf("   || %-*s", wd, f);
+	printf("   || %-*s", wd, f);
 	printf("||%s\n", o);
 	// 1
 	printf("----------------------------------------------\n");
@@ -59,6 +59,56 @@ int			main(void)
 	printf(str, n);
 	printf("||\n");
 	// 4
+
+	printf("\tTESTING PRECISION\n");
+	// TESTING PRECISION
+	i = 1;
+	printf("----------------------------------------------\n");
+	printf("   || %-*s", wd, f);
+	printf("||%s\n", o);
+	printf("----------------------------------------------\n");
+	str = "%-.5d";
+	n = 123456789;
+	printf(" %d ||%10s ", i, str);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+		printf("----------------------------------------------\n");
+	i++;
+	str = "%-10.5i";
+	n = 10;
+	printf(" %d ||%10s ", i, str);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+	i++;
+// 2
+	printf("----------------------------------------------\n");
+	i++;
+	str = "%0.5d";
+	n = 123456789;
+	printf(" %d ||%10s ", i, str);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+	printf("----------------------------------------------\n");
+	i++;
+	str = "%#15.10x";
+	n = 1123456789;
+	printf(" %d ||%10s ", i, str);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+	// 4
+	printf("----------------------------------------------\n");
+	i++;
+	str = "%-#20.15x";
+	n = 1123456789;
+	printf(" %d ||%10s ", i, str);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+	// 5
 	printf("----------------------------------------------\n");
 	i++;
 	str = "%-#19x";
@@ -77,30 +127,7 @@ int			main(void)
 	printf(str, n);
 	printf("||\n");
 	printf("----------------------------------------------\n");
-
-	printf("\tTESTING PRECISION\n");
-	// TESTING PRECISION
-	i = 1;
-	printf("----------------------------------------------\n");
-	printf("   || %-*s", wd, f);
-	printf("||%s\n", o);
-	printf("----------------------------------------------\n");
-	str = "%-.5d";
-	n = 123456789;
-	printf(" %d ||%10s ", i, str);
-	printf("||");
-	printf(str, n);
-	printf("||\n");
-	// 2
-	printf("----------------------------------------------\n");
-	i++;
-	str = "%0.5d";
-	n = 123456789;
-	printf(" %d ||%10s ", i, str);
-	printf("||");
-	printf(str, n);
-	printf("||\n");
-	// 3
+// 3
 	printf("----------------------------------------------\n");
 	i++;
 	str = "%#.19x";
@@ -161,33 +188,6 @@ int			main(void)
 	printf(str, n);
 	printf("||\n");
 	// 3
-	printf("----------------------------------------------\n");
-	i++;
-	str = "%#15.10x";
-	n = 1123456789;
-	printf(" %d ||%10s ", i, str);
-	printf("||");
-	printf(str, n);
-	printf("||\n");
-	// 4
-	printf("----------------------------------------------\n");
-	i++;
-	str = "%-#20.15x";
-	n = 1123456789;
-	printf(" %d ||%10s ", i, str);
-	printf("||");
-	printf(str, n);
-	printf("||\n");
-	// 5
-	printf("----------------------------------------------\n");
-	i++;
-	str = "%-10.5i";
-	n = 10;
-	printf(" %d ||%10s ", i, str);
-	printf("||");
-	printf(str, n);
-	printf("||\n");
-	i++;
 
 	// TESTING STRING FLAGS
 	printf("----------------------------------------------\n");
@@ -388,88 +388,6 @@ int			main(void)
 	printf(str, n);
 	printf("||\n");
 	printf("%lli\n", llin);
-	printf("----------------------------------------------\n");
-*/
-	printf("----------------------------------------------\n");
-	printf("\tTESTING %%G %%E %%F \n");
-	// TESTING PRECISION
-	i = 1;
-	printf("----------------------------------------------\n");
-	printf("   || %-*s", wd, f);
-	printf("||%s\n", o);
-	float fl = 51200.457845890820;
-	double dbl = 123456.654333;
-// 1	
-	printf("----------------------------------------------\n");
-	str = "%f";
-	printf(" %d ||%10s", i, str);
-	printf("||");
-	printf(str, dbl);
-	printf("||");
-	printf("%f\n", dbl);
-// 2
-	printf("----------------------------------------------\n");
-	i++;
-	str = "%g";
-	printf(" %d ||%10s", i, str);
-	printf("||");
-	printf(str, fl);
-	printf("||");
-	printf("%f\n", fl);
-// 3
-	printf("----------------------------------------------\n");
-	i++;	
-	str = "%e";
-	printf(" %d ||%10s", i, str);
-	printf("||");
-	printf(str, fl);
-	printf("||");
-	printf("%f\n", fl);
-// 4
-	printf("----------------------------------------------\n");
-	i++;
-	str = "%10.10f";
-	printf(" %d ||%10s", i, str);
-	printf("||");
-	printf(str, fl);
-	printf("||");
-	printf("%f\n", fl);
-// 5
-	printf("----------------------------------------------\n");
-	i++;
-	str = "%10.10g";
-	printf(" %d ||%10s", i, str);
-	printf("||");
-	printf(str, fl);
-	printf("||");
-	printf("%f\n", fl);
-// 6
-	printf("----------------------------------------------\n");
-	i++;	
-	str = "%10.10e";
-	printf(" %d ||%10s", i, str);
-	printf("||");
-	printf(str, fl);
-	printf("||");
-	printf("%f\n", fl);
-	printf("----------------------------------------------\n");
-// 6
-	i++;	
-	str = "%f";
-	printf(" %d ||%10s", i, str);
-	printf("||");
-	printf(str, fl);
-	printf("||");
-	printf("%f\n", fl);
-	printf("----------------------------------------------\n");
-	i++;
-	str = "%f";
-	printf(" %d ||%10s", i, str);
-	printf("||");
-	printf(str, fl);
-	printf("||");
-	printf("%f\n", fl);
-
 	printf("----------------------------------------------\n");
 
 	printf("size of char = %lu\n", sizeof(char));
