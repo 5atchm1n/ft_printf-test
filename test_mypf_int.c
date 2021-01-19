@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/17 04:46:06 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/19 02:44:50 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,23 @@ int			main(void)
 	ft_printf(" %d || %10i||%10s", i, n, str);
 	ft_printf("||");
 	ft_printf(str, n);
+	ft_printf("||\n");
+// 9
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%3d";
+	n = 123456789;
+	ft_printf(" %d || %10i||%10s", i, 0, str);
+	ft_printf("||");
+	ft_printf(str, 0);
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%0-8.3d";
+	n = 123456789;
+	ft_printf(" %d || %10i||%10s", i, 0, str);
+	ft_printf("||");
+	ft_printf(str, 0);
 	ft_printf("||\n");
 
 // TESTING PRECISION

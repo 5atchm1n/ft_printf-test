@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/17 04:19:53 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/19 02:46:14 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,14 @@ int			main(void)
 	printf(str, n);
 	printf("||\n");
 	// 4
+printf("----------------------------------------------\n");
+	i++;
+	str = "%0-8.3d";
+	n = 123456789;
+	printf(" %d ||%10s ", 0, str);
+	printf("||");
+	printf(str, 0);
+	printf("||\n");
 
 	printf("\tTESTING PRECISION\n");
 	// TESTING PRECISION
