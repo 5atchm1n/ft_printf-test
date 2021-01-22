@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 00:40:03 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/17 04:46:27 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/20 07:27:52 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,15 @@ int			main(void)
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+// 4
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%#x";
+	n = 0;
+	ft_printf(" %d ||%10s||%-10i", i, str, n);
+	ft_printf("||");
+	ft_printf(str, n);
+	ft_printf("||\n");
 
 	ft_printf("----------------------------------------------\n");
 	ft_printf("\tTESTING PRECISION AND WIDTH\n");
@@ -203,16 +212,40 @@ int			main(void)
 	ft_printf("----------------------------------------------\n");
 // 1
 	i = 1;
-	str = "%-10p";
+	str = "%p";
 	n = 10;
 	ft_printf(" %d ||%10s ", i, str);
 	ft_printf("||");
 	ft_printf(str, &n);
 	ft_printf("||\n");
-// 2
 	ft_printf("----------------------------------------------\n");
 	i++;
-	str = "%10p";
+	str = "%.p";
+	n = 10;
+	ft_printf(" %d ||%10s ", i, str);
+	ft_printf("||");
+	ft_printf(str, &n);
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+		i++;
+	str = "%.5p";
+	n = 10;
+	ft_printf(" %d ||%10s ", i, str);
+	ft_printf("||");
+	ft_printf(str, &n);
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+		i++;
+	str = "%.16p";
+	n = 10;
+	ft_printf(" %d ||%10s ", i, str);
+	ft_printf("||");
+	ft_printf(str, &n);
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+
+i++;
+	str = "%15p";
 	n = 123456789;
 	ft_printf(" %d ||%10s ", i, str);
 	ft_printf("||");
@@ -235,6 +268,22 @@ int			main(void)
 	ft_printf(" %d ||%10s ", i, str);
 	ft_printf("||");
 	ft_printf(str, &n);
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%.12p";
+	n = 10;
+	ft_printf(" %d ||%10s ", i, str);
+	ft_printf("||");
+	ft_printf(str, NULL);
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%p";
+	n = 10;
+	ft_printf(" %d ||%10s ", i, str);
+	ft_printf("||");
+	ft_printf(str, NULL);
 	ft_printf("||\n");
 	ft_printf("----------------------------------------------\n");
 

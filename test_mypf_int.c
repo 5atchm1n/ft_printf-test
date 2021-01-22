@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/19 02:44:50 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/22 19:22:35 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,6 +148,42 @@ int			main(void)
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%1.5d";
+	n = -1024;
+	ft_printf(" %d || %10i||%10s", i, n, str);
+	ft_printf("||");
+	ft_printf(str, n);
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%7.7d";
+	n = -10240148;
+	ft_printf(" %d || %10i||%10s", i, n, str);
+	ft_printf("||");
+	ft_printf(str, n);
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%07d";
+	n = -54;
+	ft_printf(" %d || %10i||%10s", i, n, str);
+	ft_printf("||");
+	ft_printf(str, n);
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%0.5d";
+	n = -1024;
+	ft_printf(" %d || %10i||%10s", i, n, str);
+	ft_printf("||");
+	ft_printf(str, n);
+	ft_printf("||\n");
+
+
+
+
 // TESTING PRECISION
 	ft_printf("----------------------------------------------\n");
 	ft_printf("\tTESTING PRECISION AND WIDTH\n");
@@ -190,7 +226,38 @@ int			main(void)
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+// 4	
+	ft_printf("----------------------------------------------\n");
 	i++;
+	str = "%-5.6i";
+	n = -12345;
+	ft_printf(" %d || %10i||%10s", i, n, str);
+	ft_printf("||");
+	ft_printf(str, n);
+	ft_printf("||\n");
+// 4	
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%-3.3i";
+	n = -123;
+	ft_printf(" %d || %10i||%10s", i, n, str);
+	ft_printf("||");
+	ft_printf(str, n);
+	ft_printf("||\n");
+// 4	
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%-.i";
+	n = -1234;
+	ft_printf(" %d || %10i||%10s", i, n, str);
+	ft_printf("||");
+	ft_printf(str, n);
+	ft_printf("||\n");
+	printf(" %d || %10i||%10s", i, n, str);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+
 // TESTING PRECISION
 	ft_printf("----------------------------------------------\n");
 	ft_printf("\tTESTING PRECISION AND WIDTH\n");
@@ -235,5 +302,45 @@ int			main(void)
 	ft_printf(str, u);
 	ft_printf("||\n");
 	ft_printf("----------------------------------------------\n");
+
+
+	i++;
+	str = "%5%";
+	ft_printf(" %d ||%10s", i, str);
+	ft_printf("||");
+	ft_printf("%5%");
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+i++;
+	str = "%-5%";
+	ft_printf(" %d ||%10s", i, str);
+	ft_printf("||");
+	ft_printf("%5%");
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+i++;
+	str = "%05%";
+	ft_printf(" %d ||%10s", i, str);
+	ft_printf("||");
+	ft_printf("%5%");
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+i++;
+	str = "%-05%";
+	ft_printf(" %d ||%10s", i, str);
+	ft_printf("||");
+	ft_printf("%5%");
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+
+	i++;
+	str = "%%";
+	ft_printf(" %d ||%10s", i, str);
+	ft_printf("||");
+	ft_printf("%5%");
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+
+
 	return (0);
 }

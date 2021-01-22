@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/18 22:59:44 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/20 21:01:02 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -200,6 +200,25 @@ printf(" %d ||%10s", i, str);
 	printf(" %d ||%10s", i, str);
 	printf("||");
 	printf(str, fl2);
+	printf("||\n");
+	printf("----------------------------------------------\n");
+	i++;	
+	fl = 0;
+	fl2 = 100000000000;
+	str = "%f";
+	printf(" %d ||%10s", i, str);
+	printf("||");
+	printf(str, fl);
+	printf("||\n");
+	str = "%e";
+	printf(" %d ||%10s", i, str);
+	printf("||");
+	printf(str, fl);
+	printf("||\n");
+	str = "%g";
+	printf(" %d ||%10s", i, str);
+	printf("||");
+	printf(str, fl);
 	printf("||\n");
 
 	return (0);

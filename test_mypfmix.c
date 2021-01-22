@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/20 20:26:55 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/18 22:58:06 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -225,28 +225,6 @@ printf("f1 = %.9f & f2 = %.9f\n", fl, fl2);
 	ft_printf("||");
 	ft_printf(str, fl2);
 	ft_printf("||\n");
-	ft_printf("----------------------------------------------\n");
-	i++;	
-	fl = 0;
-	fl2 = 100000000000;
-	str = "%f";
-	ft_printf(" %d ||%10s", i, str);
-	ft_printf("||");
-	ft_printf(str, fl);
-	ft_printf("||\n");
-	str = "%e";
-	ft_printf(" %d ||%10s", i, str);
-	ft_printf("||");
-	ft_printf(str, fl);
-	ft_printf("||\n");
-	str = "%g";
-	ft_printf(" %d ||%10s", i, str);
-	ft_printf("||");
-	ft_printf(str, fl);
-	ft_printf("||\n");
-	ft_printf("----------------------------------------------\n");
-// 7	
-	
 // 7
 /*	ft_printf("----------------------------------------------\n");
 	str = "%f";

@@ -6,7 +6,7 @@
 #    By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/18 06:45:17 by sshakya           #+#    #+#              #
-#    Updated: 2021/01/19 02:18:31 by sshakya          ###   ########.fr        #
+#    Updated: 2021/01/21 17:13:25 by sshakya          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,8 @@ TEST2 = test_mypf_hexp.c
 
 TEST3 = test_mypf_fge.c
 
-TESTSPLT =	../srcs/pf_split.c test_pfsplit.c
+TESTSPLT =	../srcs/pf_split.c test_pfsplit.c ../srcs/ft_printf_utils.c \
+			../srcs/ft_printf_utils_2.c
 
 TESTFLAGS = ../srcs/pf_setflags.c test_setflags.c ../srcs/ft_printf_utils.c \
 		../srcs/ft_printf_libft.c
@@ -76,6 +77,8 @@ TESTPF2 = test_printf2.c
 TESTPF3 = test_printf3.c
 
 TESTPF4 = test_printf4.c
+
+TESTPF5 = test_printf5.c
 
 TESTMYPF = test_mypf.c
 
@@ -119,13 +122,18 @@ testlst:
 
 testpf-int:
 	${CC} ${CFLAGS} ${MEM} ${INCLUDE} ${TESTPF} && ./a.out
+
 testpf-lenmod:
 	${CC} ${CFLAGS} ${MEM} ${INCLUDE} ${TESTPF2} && ./a.out
+
 testpf-fge:
 	${CC} ${CFLAGS} ${MEM} ${INCLUDE} ${TESTPF3} && ./a.out
+
 testpf-hex:
 	${CC} ${CFLAGS} ${MEM} ${INCLUDE} ${TESTPF4} && ./a.out
 
+testpf-str:
+	${CC} ${CFLAGS} ${MEM} ${INCLUDE} ${TESTPF5} && ./a.out
 
 testmypf:
 	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${TESTMYPF} && ./a.out
