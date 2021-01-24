@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/21 15:58:18 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/23 00:19:51 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ int			main(void)
 	int		wd;
 	int		n;
 	int		i;
-	
+	int		count;
+
 	ft_printf("----------------------------------------------\n");
 	ft_printf("-------- TESTING FT_PRINTF STRING ------------\n");
 	ft_printf("----------------------------------------------\n");
@@ -31,21 +32,25 @@ int			main(void)
 	f ="format";
 	wd = 10;
 	i = 0;
+
 	// TESTING STRING FLAGS
 	ft_printf("   || %-*s", wd, f);
 	ft_printf("||%s\n", o);
 	ft_printf("----------------------------------------------\n");
 	i = 1;
-	test = "123456789";
+	test = "this #is a #test";
 	n = 5;
+	count = 0;
 	str = "%*s";
 	ft_printf(" %-2d||%10s ", i, str);
 	ft_printf("||");
-	ft_printf(str, n, test);
+	count = ft_printf(str, n, test);
+	ft_printf("||%3d", count);
 	ft_printf("||\n");
 	printf("%3s||%10s ","pf", str);
 	printf("||");
-	printf(str, n, test);
+	count = printf(str, n, test);
+	printf("||%3d", count);
 	printf("||\n");
 
 // 2
@@ -54,11 +59,13 @@ int			main(void)
 	str = "%.*s";
 	ft_printf(" %d ||%10s ", i, str);
 	ft_printf("||");
-	ft_printf(str, n, test);
+	count = ft_printf(str, n, test);
+	ft_printf("||%3d", count);
 	ft_printf("||\n");
 	printf(" %d ||%10s ", i, str);
 	printf("||");
-	printf(str, n, test);
+	count = printf(str, n, test);
+	printf("||%3d", count);
 	printf("||\n");
 // 3
 	ft_printf("----------------------------------------------\n");
@@ -66,11 +73,13 @@ int			main(void)
 	str = "%-.14s";
 	ft_printf(" %d ||%10s ", i, str);
 	ft_printf("||");
-	ft_printf(str, test);
+	count = ft_printf(str, test);
+	ft_printf("||%3d", count);
 	ft_printf("||\n");
 	printf(" %d ||%10s ", i, str);
 	printf("||");
-	printf(str, test);
+	count = printf(str, test);
+	printf("||%3d", count);
 	printf("||\n");
 // 4
 	ft_printf("----------------------------------------------\n");
@@ -78,11 +87,13 @@ int			main(void)
 	str = "%-14s";
 	ft_printf(" %d ||%10s ", i, str);
 	ft_printf("||");
-	ft_printf(str, test);
+	count = ft_printf(str, test);
+	ft_printf("||%3d", count);
 	ft_printf("||\n");
 	printf(" %d ||%10s ", i, str);
 	printf("||");
-	printf(str, test);
+	count = printf(str, test);
+	printf("||%3d", count);
 	printf("||\n");
 
 // 5
@@ -91,11 +102,13 @@ int			main(void)
 	str = "%14.5s";
 	ft_printf(" %d ||%10s ", i, str);
 	ft_printf("||");
-	ft_printf(str, test);
+	count = ft_printf(str, test);
+	ft_printf("||%3d", count);
 	ft_printf("||\n");
 	printf(" %d ||%10s ", i, str);
 	printf("||");
-	printf(str, test);
+	count = printf(str, test);
+	printf("||%3d", count);
 	printf("||\n");
 
 // 6
@@ -104,11 +117,13 @@ int			main(void)
 	str = "%-14.5s";
 	ft_printf(" %d ||%10s ", i, str);
 	ft_printf("||");
-	ft_printf(str, test);
+	count = ft_printf(str, test);
+	ft_printf("||%3d", count);
 	ft_printf("||\n");
 	printf(" %d ||%10s ", i, str);
 	printf("||");
-	printf(str, test);
+	count = printf(str, test);
+	printf("||%3d", count);
 	printf("||\n");
 
 // 7
@@ -117,11 +132,13 @@ int			main(void)
 	str = "%%*i 42 == |%*i|";
 	ft_printf(" %d ||%10s ", i, str);
 	ft_printf("||");
-	ft_printf(str, 3, 42);
+	count = ft_printf(str, 3, 42);
+	ft_printf("||%3d", count);
 	ft_printf("||\n");
 	printf(" %d ||%10s ", i, str);
 	printf("||");
-	printf(str, 3, 42);
+	count = printf(str, 3, 42);
+	printf("||%3d", count);
 	printf("||\n");
 // 8
 	ft_printf("----------------------------------------------\n");
@@ -129,11 +146,13 @@ int			main(void)
 	str = "%.s";
 	ft_printf(" %d ||%10s ", i, str);
 	ft_printf("||");
-	ft_printf(str, "hello");
+	count = ft_printf(str, "hello");
+	ft_printf("||%3d", count);
 	ft_printf("||\n");
-		printf(" %d ||%10s ", i, str);
+	printf(" %d ||%10s ", i, str);
 	printf("||");
-	printf(str, test);
+	count = printf(str, test);
+	printf("||%3d", count);
 	printf("||\n");
 // 9
 	ft_printf("----------------------------------------------\n");
@@ -141,11 +160,13 @@ int			main(void)
 	str = "%7.5s";
 	ft_printf(" %d ||%10s ", i, str);
 	ft_printf("||");
-	ft_printf(str, "yolo");
+	count = ft_printf(str, "yolo");
+	ft_printf("||%3d", count);
 	ft_printf("||\n");
 		printf(" %d ||%10s ", i, str);
 	printf("||");
-	printf(str, "yolo");
+	count = printf(str, "yolo");
+	printf("||%3d", count);
 	printf("||\n");
 // 10
 	ft_printf("----------------------------------------------\n");
@@ -153,11 +174,13 @@ int			main(void)
 	str = "%3.7s%7.7s";
 	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
-	ft_printf(str, "hello", "world");
+	count = ft_printf(str, "hello", "world");
+	ft_printf("||%3d", count);
 	ft_printf("||\n");
 	printf(" %d ||%10s", i, str);
 	printf("||");
-	printf(str, "hello", "world");
+	count = printf(str, "hello", "world");
+	printf("||%3d", count);
 	printf("||\n");
 // 11
 	ft_printf("----------------------------------------------\n");
@@ -165,11 +188,13 @@ int			main(void)
 	str = "%7.3s%3.3s";
 	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
-	ft_printf(str, "hello", "world");
+	count = ft_printf(str, "hello", "world");
+	ft_printf("||%3d", count);
 	ft_printf("||\n");
 	printf(" %d ||%10s", i, str);
 	printf("||");
 	printf(str, "hello", "world");
+	printf("||%3d", count);
 	printf("||\n");
 // 12
 	ft_printf("----------------------------------------------\n");
@@ -177,33 +202,39 @@ int			main(void)
 	str = "%3.3s%3.3s";
 	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
-	ft_printf(str, "hello", "world");
+	count = ft_printf(str, "hello", "world");
+	ft_printf("||%3d", count);
 	ft_printf("||\n");
 	printf(" %d ||%10s", i, str);
 	printf("||");
-	printf(str, "hello", "world");
+	count = printf(str, "hello", "world");
+	printf("||%3d", count);
 	printf("||\n");
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%-32s";
 	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
-	ft_printf(str, NULL);
+	count = ft_printf(str, NULL);
+	ft_printf("||%3d", count);
 	ft_printf("||\n");
 	printf(" %d ||%10s", i, str);
 	printf("||");
-	printf(str, NULL);
+	count = printf(str, NULL);
+	printf("||%3d", count);
 	printf("||\n");
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%3.6s";
 	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
-	ft_printf(str, NULL);
+	count = ft_printf(str, NULL);
+	ft_printf("||%3d", count);
 	ft_printf("||\n");
 	printf(" %d ||%10s", i, str);
 	printf("||");
-	printf(str, NULL);
+	count = printf(str, NULL);
+	printf("||%3d", count);
 	printf("||\n");
 
 	static char *s_hidden = "hi low\0don't print me lol\0";
@@ -212,11 +243,13 @@ int			main(void)
 	str = "%3.s";
 	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
-	ft_printf(str, s_hidden);
+	count = ft_printf(str, s_hidden);
+	ft_printf("||%3d", count);
 	ft_printf("||\n");
 	printf(" %d ||%10s", i, str);
 	printf("||");
-	printf(str, s_hidden);
+	count = printf(str, s_hidden);
+	printf("||%3d", count);
 	printf("||\n");
 
 

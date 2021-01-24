@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/20 21:01:02 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/23 02:38:35 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,12 @@ int			main(void)
 	printf("----------------------------------------------\n");
 	printf("   || %-*s", wd, f);
 	printf("||%s\n", o);
-//	float fl = 000.99999997845890820;
-// 7
 	double fl  = 0.012345678912300; // 8
 	double fl2 = 0.0012345678912300; // 7
 	double fl3 = 0.00012345678912300;  // 6
 	double fl4 = 0.000012345678912300; // 5
 	double fl5 = 0.00000123400; // 5
+
 	printf("----------------------------------------------\n");
 	i++;	
 	str = "%f";
@@ -61,7 +60,7 @@ int			main(void)
 	printf("||");
 	printf(str, fl2);
 	printf("||\n");
-printf(" %d ||%10s", i, str);
+	printf(" %d ||%10s", i, str);
 	printf("||");
 	printf(str, fl3);
 	printf("||\n");
@@ -69,12 +68,39 @@ printf(" %d ||%10s", i, str);
 	printf("||");
 	printf(str, fl4);
 	printf("||\n");
-printf(" %d ||%10s", i, str);
+	printf(" %d ||%10s", i, str);
 	printf("||");
 	printf(str, fl5);
 	printf("||\n");
-	
-// 8
+	printf("----------------------------------------------\n");
+	fl  = 0.99999999999999; // 8
+	fl2 = 0.9999999999999999; // 7
+	fl3 = 0.09999;  // 6
+	fl4 = 0.09999; // 5
+	fl5 = 0.0999; // 5
+	printf("----------------------------------------------\n");
+	i++;	
+	str = "%.14f";
+	printf(" %d ||%10s", i, str);
+	printf("||");
+	printf(str, fl);
+	printf("||\n");
+	printf(" %d ||%10s", i, str);
+	printf("||");
+	printf(str, fl2);
+	printf("||\n");
+	printf(" %d ||%10s", i, str);
+	printf("||");
+	printf(str, fl3);
+	printf("||\n");
+	printf(" %d ||%10s", i, str);
+	printf("||");
+	printf(str, fl4);
+	printf("||\n");
+	printf(" %d ||%10s", i, str);
+	printf("||");
+	printf(str, fl5);
+	printf("||\n");
 	printf("----------------------------------------------\n");
 	i++;
 	str = "%g";
@@ -86,7 +112,7 @@ printf(" %d ||%10s", i, str);
 	printf("||");
 	printf(str, fl2);
 	printf("||\n");
-printf(" %d ||%10s", i, str);
+	printf(" %d ||%10s", i, str);
 	printf("||");
 	printf(str, fl3);
 	printf("||\n");
@@ -94,12 +120,10 @@ printf(" %d ||%10s", i, str);
 	printf("||");
 	printf(str, fl4);
 	printf("||\n");
-printf(" %d ||%10s", i, str);
+	printf(" %d ||%10s", i, str);
 	printf("||");
 	printf(str, fl5);
 	printf("||\n");
-
-// 9	
 	printf("----------------------------------------------\n");
 	i++;
 	str = "%e";
@@ -119,13 +143,11 @@ printf(" %d ||%10s", i, str);
 	printf("||");
 	printf(str, fl4);
 	printf("||\n");
-printf(" %d ||%10s", i, str);
+	printf(" %d ||%10s", i, str);
 	printf("||");
 	printf(str, fl5);
 	printf("||\n");
-
 	printf("----------------------------------------------\n");
-
 // 1	
 	printf("f1 = %15.15f & f2 = %15.15f\n", fl, fl2);
 	printf("----------------------------------------------\n");

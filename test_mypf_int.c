@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/22 19:22:35 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/23 00:34:53 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,6 +168,22 @@ int			main(void)
 	i++;
 	str = "%07d";
 	n = -54;
+	ft_printf(" %d || %10i||%10s", i, n, str);
+	ft_printf("||");
+	ft_printf(str, n);
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%0.5d";
+	n = -1024;
+	ft_printf(" %d || %10i||%10s", i, n, str);
+	ft_printf("||");
+	ft_printf(str, n);
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%-8.3d";
+	n = -1024;
 	ft_printf(" %d || %10i||%10s", i, n, str);
 	ft_printf("||");
 	ft_printf(str, n);

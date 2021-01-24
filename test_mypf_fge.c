@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/20 20:26:55 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/24 15:19:23 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int			main(void)
 	char	*o;
 	char	*f;
 	int		wd;
-//	int		n;
+	int		n;
 	int		i;
 	ft_printf("----------------------------------------------\n");
 	ft_printf("-------- TESTING FT_PRINTF RETURN ------------\n");
@@ -52,179 +52,605 @@ int			main(void)
 	str = "%f";
 	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", 2, str);
+	n = ft_printf(str, fl);
 	ft_printf("||");
-	ft_printf(str, fl2);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", 3, str);
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl);
+	printf("||");
+	printf("%i||\n", n);
+
+	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl3);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", 4, str);
+	n = ft_printf(str, fl2);
 	ft_printf("||");
-	ft_printf(str, fl4);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", 5, str);
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl2);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl5);
-	ft_printf("||\n");
+	n = ft_printf(str, fl3);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl3);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl4);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl4);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl5);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl5);
+	printf("||");
+	printf("%i||\n", n);
+
+
+
 	ft_printf("----------------------------------------------\n");
-	fl  = 0.012345678912300; // 8
+	fl  = 5.012345678912300; // 8
 	fl2 = 0.0012345678912300; // 7
 	fl3 = 0.00012345678913200;  // 6
 	fl4 = 0.000012345678912300; // 5
 	fl5 = 0.00000123400; // 5
-printf("f1 = %.9f & f2 = %.9f\n", fl, fl2);
+	printf("f1 = %.9f & f2 = %.9f\n", fl, fl2);
 	printf("f3 = %.9f & f4 = %.9f & f5 = %.9f\n", fl3, fl4, fl5);
 	ft_printf("----------------------------------------------\n");
 // 1	
 	str = "%f";
 	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", 2, str);
+	n = ft_printf(str, fl);
 	ft_printf("||");
-	ft_printf(str, fl2);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", 3, str);
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl);
+	printf("||");
+	printf("%i||\n", n);
+
+	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl3);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", 4, str);
+	n = ft_printf(str, fl2);
 	ft_printf("||");
-	ft_printf(str, fl4);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", 5, str);
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl2);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl5);
-	ft_printf("||\n");
+	n = ft_printf(str, fl3);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl3);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl4);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl4);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl5);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl5);
+	printf("||");
+	printf("%i||\n", n);
 // 8
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%g";
 	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", 2, str);
+	n = ft_printf(str, fl);
 	ft_printf("||");
-	ft_printf(str, fl2);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", 3, str);
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl);
+	printf("||");
+	printf("%i||\n", n);
+
+	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl3);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", 4, str);
+	n = ft_printf(str, fl2);
 	ft_printf("||");
-	ft_printf(str, fl4);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", 5, str);
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl2);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl5);
-	ft_printf("||\n");
-// 9	
+	n = ft_printf(str, fl3);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl3);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl4);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl4);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl5);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl5);
+	printf("||");
+	printf("%i||\n", n);
+
+	
+	
+	
+	
+	
+	
+	// 9	
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%e";
-	ft_printf(" %d ||%10s", i, str);
+	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", i, str);
+	n = ft_printf(str, fl);
 	ft_printf("||");
-	ft_printf(str, fl2);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", 3, str);
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl);
+	printf("||");
+	printf("%i||\n", n);
+
+	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl3);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", 4, str);
+	n = ft_printf(str, fl2);
 	ft_printf("||");
-	ft_printf(str, fl4);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", 5, str);
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl2);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl5);
-	ft_printf("||\n");
+	n = ft_printf(str, fl3);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl3);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl4);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl4);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl5);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl5);
+	printf("||");
+	printf("%i||\n", n);
+
 
 // 1	
-
+	i++;
 	ft_printf("----------------------------------------------\n");
 	str = "%.10f";
-	ft_printf(" %d ||%10s", i, str);
+	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", i, str);
+	n = ft_printf(str, fl);
 	ft_printf("||");
-	ft_printf(str, fl2);
-	ft_printf("||\n");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl);
+	printf("||");
+	printf("%i||\n", n);
+
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl2);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl2);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl3);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl3);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl4);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl4);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl5);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl5);
+	printf("||");
+	printf("%i||\n", n);
+
 // 2
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%.10g";
-	ft_printf(" %d ||%10s", i, str);
+		ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", i, str);
+	n = ft_printf(str, fl);
 	ft_printf("||");
-	ft_printf(str, fl2);
-	ft_printf("||\n");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl);
+	printf("||");
+	printf("%i||\n", n);
+
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl2);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl2);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl3);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl3);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl4);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl4);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl5);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl5);
+	printf("||");
+	printf("%i||\n", n);
 
 // 3
 	ft_printf("----------------------------------------------\n");
 	i++;	
 	str = "%.10e";
-	ft_printf(" %d ||%10s", i, str);
+	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", i, str);
+	n = ft_printf(str, fl);
 	ft_printf("||");
-	ft_printf(str, fl2);
-	ft_printf("||\n");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl);
+	printf("||");
+	printf("%i||\n", n);
+
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl2);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl2);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl3);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl3);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl4);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl4);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl5);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl5);
+	printf("||");
+	printf("%i||\n", n);
 
 // 4
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%20.10f";
-	ft_printf(" %d ||%10s", i, str);
+	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", i, str);
+	n = ft_printf(str, fl);
 	ft_printf("||");
-	ft_printf(str, fl2);
-	ft_printf("||\n");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl);
+	printf("||");
+	printf("%i||\n", n);
+
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl2);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl2);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl3);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl3);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl4);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl4);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl5);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl5);
+	printf("||");
+	printf("%i||\n", n);
 
 // 5
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%20.10g";
-	ft_printf(" %d ||%10s", i, str);
+	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", i, str);
+	n = ft_printf(str, fl);
 	ft_printf("||");
-	ft_printf(str, fl2);
-	ft_printf("||\n");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl);
+	printf("||");
+	printf("%i||\n", n);
+
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl2);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl2);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl3);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl3);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl4);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl4);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl5);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl5);
+	printf("||");
+	printf("%i||\n", n);
+
 // 6
 	ft_printf("----------------------------------------------\n");
 	i++;	
 	str = "%20.10e";
-	ft_printf(" %d ||%10s", i, str);
+	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
-	ft_printf(str, fl);
-	ft_printf("||\n");
-	ft_printf(" %d ||%10s", i, str);
+	n = ft_printf(str, fl);
 	ft_printf("||");
-	ft_printf(str, fl2);
-	ft_printf("||\n");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl);
+	printf("||");
+	printf("%i||\n", n);
+
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl2);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl2);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl3);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl3);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl4);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl4);
+	printf("||");
+	printf("%i||\n", n);
+	
+	ft_printf(" %d ||%10s", 1, str);
+	ft_printf("||");
+	n = ft_printf(str, fl5);
+	ft_printf("||");
+	ft_printf("%i||\n", n);
+	printf(" %d ||%10s", 1, str);
+	printf("||");
+	n = printf(str, fl5);
+	printf("||");
+	printf("%i||\n", n);
+
 	ft_printf("----------------------------------------------\n");
 	i++;	
 	fl = 0;
