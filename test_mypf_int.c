@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/23 00:34:53 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/25 01:08:20 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -352,6 +352,34 @@ i++;
 	i++;
 	str = "%%";
 	ft_printf(" %d ||%10s", i, str);
+	ft_printf("||");
+	ft_printf("%5%");
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%%";
+	ft_printf(" %d ||%10s", i, str);
+	ft_printf("||");
+	ft_printf("%5%");
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%-5.0i";
+	ft_printf(" %d ||%10s", i, str);
+	ft_printf("||");
+	ft_printf("%5%");
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%-5.0d";
+	ft_printf(" %d ||%10s", i, str);
+	ft_printf("||");
+	ft_printf("%5%");
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%-5.0u";
+	ft_printf(" %d ||%10s", u, str);
 	ft_printf("||");
 	ft_printf("%5%");
 	ft_printf("||\n");
