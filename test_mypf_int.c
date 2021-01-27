@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/25 01:08:20 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/27 01:15:10 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -318,7 +318,30 @@ int			main(void)
 	ft_printf(str, u);
 	ft_printf("||\n");
 	ft_printf("----------------------------------------------\n");
-
+	i++;
+	str = "%-10.5u";
+	u = 0;
+	ft_printf(" %d || %10u||%10s", i, u, str);
+	ft_printf("||");
+	ft_printf(str, u);
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%-*.*u";
+	u = 0;
+	ft_printf(" %d || %10u||%10s", i, u, str);
+	ft_printf("||");
+	ft_printf(str, 5, -1, u);
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%0*.*u";
+	u = 0;
+	ft_printf(" %d || %10u||%10s", i, u, str);
+	ft_printf("||");
+	ft_printf(str, 5,-1, u);
+	ft_printf("||\n");
+	ft_printf("----------------------------------------------\n");
 
 	i++;
 	str = "%5%";
