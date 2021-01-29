@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/23 00:19:51 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/01/28 22:45:48 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -249,6 +249,56 @@ int			main(void)
 	printf(" %d ||%10s", i, str);
 	printf("||");
 	count = printf(str, s_hidden);
+	printf("||%3d", count);
+	printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%2c";
+	char c = '#';
+	ft_printf(" %d ||%10s", i, str);
+	ft_printf("||");
+	count = ft_printf(str, c);
+	ft_printf("||%3d", count);
+	ft_printf("||\n");
+	printf(" %d ||%10s", i, str);
+	printf("||");
+	count = printf(str, c);
+	printf("||%3d", count);
+	printf("||\n");
+	str = "%-2c";
+	c = '#';
+	ft_printf(" %d ||%10s", i, str);
+	ft_printf("||");
+	count = ft_printf(str, c);
+	ft_printf("||%3d", count);
+	ft_printf("||\n");
+	printf(" %d ||%10s", i, str);
+	printf("||");
+	count = printf(str, c);
+	printf("||%3d", count);
+	printf("||\n");
+	ft_printf("----------------------------------------------\n");
+	i++;
+	str = "%5%";
+	ft_printf(" %d ||%10s", i, str);
+	ft_printf("||");
+	count = ft_printf("%5%");
+	ft_printf("||%3d", count);
+	ft_printf("||\n");
+	printf(" %d ||%10s", i, str);
+	printf("||");
+	count = printf("%5%");
+	printf("||%3d", count);
+	printf("||\n");
+	str = "%-5%";
+	ft_printf(" %d ||%10s", i, str);
+	ft_printf("||");
+	count = ft_printf("%05%");
+	ft_printf("||%3d", count);
+	ft_printf("||\n");
+	printf(" %d ||%10s", i, str);
+	printf("||");
+	count = printf("%-5%");
 	printf("||%3d", count);
 	printf("||\n");
 

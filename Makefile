@@ -6,7 +6,7 @@
 #    By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/18 06:45:17 by sshakya           #+#    #+#              #
-#    Updated: 2021/01/27 04:56:43 by sshakya          ###   ########.fr        #
+#    Updated: 2021/01/28 23:03:10 by sshakya          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,9 +28,11 @@ SRCS1 =	../ft_printf.c \
 		../srcs/pf_setargs.c \
 		../srcs/pf_convert.c \
 		../srcs/pf_printstr.c \
+		../srcs/pf_printchar.c \
 		../srcs/pf_printstr_utils.c \
 		../srcs/pf_print.c \
-		../srcs/pf_printint_utils.c
+		../srcs/pf_printint_utils.c \
+		../srcs/pf_printint_utils_2.c
 
 SRCS2 = ../srcs/pf_setreturn.c \
 		../srcs/pf_printuint.c \
@@ -41,6 +43,7 @@ BONUS = ../bonus/pf_printfloat_bonus.c \
 		../bonus/pf_printuint_bonus.c \
 		../bonus/pf_printint_bonus.c \
 		../bonus/pf_convert_float_bonus.c \
+		../bonus/pf_convert_float_utils_bonus.c \
 		../bonus/pf_float_utils_bonus.c \
 		../bonus/pf_float_exp_bonus.c \
 		../bonus/pf_float_utils_2_bonus.c
@@ -153,6 +156,6 @@ testmypf:
 	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${TESTMYPF} && ./a.out
 
 norm :
-	~/.norminette/norminette.rb ${SRCS1} ${SRCS2} ${INCLUDE}
+	~/.norminette/norminette.rb ${SRCS1} ${SRCS2} ${BONUS} ${INCLUDE}
 
 .PHONY : all norm  clean re fclean bonus
