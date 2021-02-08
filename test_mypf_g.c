@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_mypf_fge.c                                    :+:      :+:    :+:   */
+/*   test_mypf_g.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/02/08 02:13:39 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/02/06 16:10:10 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int			main(void)
 	ft_printf("----------------------------------------------\n");
 // 1	
 	printf("=> %.10f\n", fl);
-	str = "%f";
+	str = "%g";
 	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
 	n = ft_printf(str, fl);
@@ -106,7 +106,7 @@ int			main(void)
 	printf("||");
 	printf("%i||\n", n);
 
-	str = "%.1f";
+	str = "%.1g";
 	fl5 = 1.5;
 	printf("=> %.10f\n", fl5);
 	ft_printf(" %d ||%10s", 1, str);
@@ -120,7 +120,7 @@ int			main(void)
 	printf("||");
 	printf("%i||\n", n);
 
-	str = "%.2f";
+	str = "%.2g";
 	fl5 = 1.9999;
 	printf("=> %.10f\n", fl5);
 	ft_printf(" %d ||%10s", 1, str);
@@ -134,7 +134,7 @@ int			main(void)
 	printf("||");
 	printf("%i||\n", n);
 
-	str = "%.2f";
+	str = "%.2g";
 	fl5 = 2;
 	printf("=> %.10f\n", fl5);
 	ft_printf(" %d ||%10s", 1, str);
@@ -160,7 +160,7 @@ str = "%.f";
 	n = printf(str, fl5);
 	printf("||");
 	printf("%i||\n", n);
-str = "%.e";
+str = "%.g";
 	fl5 = 2.5;
 	printf("=> %.10f\n", fl5);
 	ft_printf(" %d ||%10s", 1, str);
@@ -173,7 +173,7 @@ str = "%.e";
 	n = printf(str, fl5);
 	printf("||");
 	printf("%i||\n", n);
-str = "%f";
+str = "%g";
 	fl5 = 0.5245687;
 	printf("=> %.10f\n", fl5);
 	ft_printf(" %d ||%10s", 1, str);
@@ -186,7 +186,7 @@ str = "%f";
 	n = printf(str, fl5);
 	printf("||");
 	printf("%i||\n", n);
-	str = "%.e";
+	str = "%.g";
 	fl5 = 0.5245687;
 	printf("=> %.10f\n", fl5);
 	ft_printf(" %d ||%10s", 1, str);
@@ -199,7 +199,7 @@ str = "%f";
 	n = printf(str, fl5);
 	printf("||");
 	printf("%i||\n", n);
-	str = "% .5f";
+	str = "% .5g";
 	fl5 = 0.5;
 	printf("=> %.10f\n", fl5);
 	ft_printf(" %d ||%10s", 1, str);
@@ -212,7 +212,7 @@ str = "%f";
 	n = printf(str, fl5);
 	printf("||");
 	printf("%i||\n", n);
-	str = "%+0*.*f";
+	str = "%+0*.*g";
 	fl5 = 0.5;
 	printf("=> %.10f\n", fl5);
 	ft_printf(" %d ||%10s", 1, str);
@@ -226,7 +226,7 @@ str = "%f";
 	printf("||");
 	printf("%i||\n", n);
 	fl5 = 0;
-	str = "%-4.f";
+	str = "%-4.g";
 	printf("=> %.10f\n", fl5);
 	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
@@ -239,7 +239,7 @@ str = "%f";
 	printf("||");
 	printf("%i||\n", n);
 
-	str = "%+0*.1f";
+	str = "%+0*.1g";
 	fl5 = .5627562014631401;
 	printf("=> %.10f\n", fl5);
 	ft_printf(" %d ||%10s", 1, str);
@@ -253,7 +253,7 @@ str = "%f";
 	printf("||");
 	printf("%i||\n", n);
 
-	str = "%+00.*f";
+	str = "%+00.*g";
 	printf("=> %.10f\n", fl5);
 	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
@@ -267,7 +267,7 @@ str = "%f";
 	printf("%i||\n", n);
 	
 	fl5 = 1.1254924029263;
-	str = "%+0*.f";
+	str = "%+0*.g";
 	printf("=> %.10f\n", fl5);
 	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
@@ -280,7 +280,7 @@ str = "%f";
 	printf("||");
 	printf("%i||\n", n);
 	fl5 = 1.1254924029263;
-	str = "%*.0f";
+	str = "%*.0g";
 	printf("=> %.10f\n", fl5);
 	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
@@ -292,7 +292,7 @@ str = "%f";
 	n = printf(str, 5, fl5);
 	printf("||");
 	printf("%i||\n", n);
-	str = "%#*.0f";
+	str = "%#*.0g";
 	printf("=> %.10f\n", fl5);
 	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
@@ -304,7 +304,7 @@ str = "%f";
 	n = printf(str, 5, fl5);
 	printf("||");
 	printf("%i||\n", n);
-	str = "%#*.f";
+	str = "%#*.g";
 	printf("=> %.10f\n", fl5);
 	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
@@ -327,7 +327,7 @@ str = "%f";
 	printf("f3 = %.9f & f4 = %.9f & f5 = %.9f\n", fl3, fl4, fl5);
 	ft_printf("----------------------------------------------\n");
 // 1	
-	str = "%f";
+	str = "%g";
 	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
 	n = ft_printf(str, fl);
@@ -393,7 +393,7 @@ str = "%f";
 	printf("f1 = %.9f & f2 = %.9f\n", fl, fl2);
 	printf("f3 = %.9f & f4 = %.9f & f5 = %.9f\n", fl3, fl4, fl5);
 	ft_printf("----------------------------------------------\n");
-	str = "%f";
+	str = "%g";
 	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
 	n = ft_printf(str, fl);
@@ -461,7 +461,7 @@ str = "%f";
 // 1	
 	i++;
 	ft_printf("----------------------------------------------\n");
-	str = "%.10f";
+	str = "%.10g";
 	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
 	n = ft_printf(str, fl);
@@ -519,7 +519,7 @@ str = "%f";
 
 	ft_printf("----------------------------------------------\n");
 	i++;
-	str = "%20.10f";
+	str = "%20.10g";
 	ft_printf(" %d ||%10s", 1, str);
 	ft_printf("||");
 	n = ft_printf(str, fl);
@@ -578,7 +578,7 @@ str = "%f";
 	ft_printf("----------------------------------------------\n");
 	i++;	
 	fl = 0;
-	str = "%f";
+	str = "%g";
 	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
 	ft_printf(str, fl);
@@ -590,7 +590,7 @@ str = "%f";
 	printf("%i||\n", n);
 
 	fl = 0;
-	str = "%10.f";
+	str = "%10.g";
 	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
 	ft_printf(str, fl);

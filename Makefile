@@ -6,7 +6,7 @@
 #    By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/18 06:45:17 by sshakya           #+#    #+#              #
-#    Updated: 2021/01/28 23:03:10 by sshakya          ###   ########.fr        #
+#    Updated: 2021/02/08 03:23:15 by sshakya          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libftprintf.a
 
 INCLUDE = ../ft_printf.h
 
-SRCS1 =	../ft_printf.c \
+SRCS =	../ft_printf.c \
 		../srcs/pf_split.c \
 		../srcs/pf_split_utils.c \
 		../srcs/pf_setlst.c \
@@ -32,23 +32,22 @@ SRCS1 =	../ft_printf.c \
 		../srcs/pf_printstr_utils.c \
 		../srcs/pf_print.c \
 		../srcs/pf_printint_utils.c \
-		../srcs/pf_printint_utils_2.c
-
-SRCS2 = ../srcs/pf_setreturn.c \
+		../srcs/pf_printint_utils_2.c \
+		../srcs/pf_setreturn.c \
 		../srcs/pf_printuint.c \
 		../srcs/pf_printint.c
 
 BONUS = ../bonus/pf_printfloat_bonus.c \
-		../bonus/pf_setreturn_bonus.c \
-		../bonus/pf_printuint_bonus.c \
-		../bonus/pf_printint_bonus.c \
-		../bonus/pf_convert_float_bonus.c \
-		../bonus/pf_convert_float_utils_bonus.c \
+		../bonus/pf_convert_f_bonus.c \
+		../bonus/pf_convertfloat_fg_bonus.c \
+		../bonus/pf_convert_g_bonus.c \
+		../bonus/pf_convert_e_bonus.c \
 		../bonus/pf_float_utils_bonus.c \
+		../bonus/pf_float_utils_bonus_2.c \
 		../bonus/pf_float_exp_bonus.c \
 		../bonus/pf_float_utils_2_bonus.c
 
-OBJS = ${SRCS1.c=.o} ${SRCS2.c=.o}
+OBJS = ${SRCS.c=.o}
 
 BONUSOBJS = ${BONUS.c=.o}
 
@@ -65,6 +64,10 @@ TEST4 = test_mypf_str.c
 TEST2 = test_mypf_hexp.c
 
 TEST3 = test_mypf_fge.c
+
+TEST5 = test_mypf_f.c
+
+TEST6 = test_mypf_g.c
 
 TESTSPLT =	../srcs/pf_split.c test_pfsplit.c ../srcs/ft_printf_utils.c \
 			../srcs/ft_printf_utils_2.c
@@ -108,22 +111,22 @@ fclean : clean
 	${RM} ${NAME}
 
 test-int:
-	${CC} ${CFLAGS} ${INCLUDE} ${SRCS1} ${SRCS2} ${TEST1} && ./a.out
-
-test-int-bonus:
-	${CC} ${CFLAGS} ${INCLUDE} ${SRCS1} ${BONUS} ${TEST1} && ./a.out
+	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TEST1} && ./a.out
 
 test-str:
-	${CC} ${CFLAGS} ${INCLUDE} ${SRCS1} ${SRCS2} ${TEST4} && ./a.out
+	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TEST4} && ./a.out
 
 test-hexp:
-	${CC} ${CFLAGS} ${INCLUDE} ${SRCS1} ${SRCS2} ${TEST2} && ./a.out
-
-test-hexp-bonus:
-	${CC} ${CFLAGS} ${INCLUDE} ${SRCS1} ${BONUS} ${TEST2} && ./a.out
+	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TEST2} && ./a.out
 
 test-fge:
-	${CC} ${CFLAGS} ${INCLUDE} ${SRCS1} ${BONUS} ${TEST3} && ./a.out
+	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TEST3} && ./a.out
+
+test-f:
+	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TEST5} && ./a.out
+
+test-g:
+	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TEST6} && ./a.out
 
 testsplit:
 	${CC} ${CFLAGS} ${MEM} ${TESTSPLT} && ./a.out

@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/* ************************************************************************* */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   test_mypf_hexp.c                                   :+:      :+:    :+:   */
@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 00:40:03 by sshakya           #+#    #+#             */
-/*   Updated: 2021/01/20 07:27:52 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/02/02 05:13:34 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,10 @@ int			main(void)
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%-10i","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
 // 2
 	ft_printf("----------------------------------------------\n");
 	i++;
@@ -53,6 +57,11 @@ int			main(void)
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%-10i","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+
 // 3
 	ft_printf("----------------------------------------------\n");
 	i++;
@@ -62,6 +71,11 @@ int			main(void)
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%-10i","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+
 // 4
 	ft_printf("----------------------------------------------\n");
 	i++;
@@ -71,6 +85,11 @@ int			main(void)
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%-10i","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+
 // 5
 	ft_printf("----------------------------------------------\n");
 	i++;
@@ -80,15 +99,24 @@ int			main(void)
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%-10i","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+
 // 6
 	ft_printf("----------------------------------------------\n");
 	i++;
-	str = "%-#15x";
+	str = "%-#9x";
 	n = 2147483647;
 	ft_printf(" %d ||%10s||%-10i", i, str, n);
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%-10i","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
 
 	// TESTING PRECISION
 	ft_printf("----------------------------------------------\n");
@@ -106,6 +134,11 @@ int			main(void)
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%-10i","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+
 // 2
 	ft_printf("----------------------------------------------\n");
 	i++;
@@ -115,6 +148,11 @@ int			main(void)
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%-10i","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+
 // 3
 	ft_printf("----------------------------------------------\n");
 	i++;
@@ -124,6 +162,11 @@ int			main(void)
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%-10i","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+
 // 4
 	ft_printf("----------------------------------------------\n");
 	i++;
@@ -133,6 +176,10 @@ int			main(void)
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%-10i","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
 
 	ft_printf("----------------------------------------------\n");
 	ft_printf("\tTESTING PRECISION AND WIDTH\n");
@@ -140,69 +187,106 @@ int			main(void)
 	i = 1;
 	str = "%#15.10x";
 	n = 123456;
-	ft_printf(" %d ||%10s ||%u", i, str, n);
+	ft_printf(" %d ||%10s||%u", i, str, n);
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%u","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+
 // 1
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%-#15.10x";
 	n = 123456;
-	ft_printf(" %d ||%10s ||%u", i, str, n);
+	ft_printf(" %d ||%10s||%u", i, str, n);
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%u","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%-#15.8x";
 	n = 123456;
-	ft_printf(" %d ||%10s ||%u", i, str, n);
+	ft_printf(" %d ||%10s||%u", i, str, n);
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%u","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%#15.8x";
 	n = 1123456789;
-	ft_printf(" %d ||%10s ||%u", i, str, n);
+	ft_printf(" %d ||%10s||%u", i, str, n);
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%u","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%#14.8x";
 	n = 1123456789;
-	ft_printf(" %d ||%10s ||%u", i, str, n);
+	ft_printf(" %d ||%10s||%u", i, str, n);
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%u","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%#14.9x";
 	n = 1123456789;
-	ft_printf(" %d ||%10s ||%u", i, str, n);
+	ft_printf(" %d ||%10s||%u", i, str, n);
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%u","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%#13.10x";
 	n = 1123456789;
-	ft_printf(" %d ||%10s ||%u", i, str, n);
+	ft_printf(" %d ||%10s||%u", i, str, n);
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
+	printf("%3s||%10s||%u","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
+
 	ft_printf("----------------------------------------------\n");
 
 	i++;
 	str = "%-#.x";
 	n = 1123456789;
-	ft_printf(" %d ||%10s ||%u", i, str, n);
+	ft_printf(" %d ||%10s||%u", i, str, n);
 	ft_printf("||");
 	ft_printf(str, n);
 	ft_printf("||\n");
-
+	printf("%3s||%10s||%u","pf", str, n);
+	printf("||");
+	printf(str, n);
+	printf("||\n");
 // TESTING POINTER	
 	ft_printf("----------------------------------------------\n");
 	ft_printf("\tTESTING POINTER FORMAT\n");
@@ -214,77 +298,122 @@ int			main(void)
 	i = 1;
 	str = "%p";
 	n = 10;
-	ft_printf(" %d ||%10s ", i, str);
+	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
 	ft_printf(str, &n);
 	ft_printf("||\n");
+	printf("%3s||%10s","pf", str);
+	printf("||");
+	printf(str, &n);
+	printf("||\n");
+
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%.p";
 	n = 10;
-	ft_printf(" %d ||%10s ", i, str);
+	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
 	ft_printf(str, &n);
 	ft_printf("||\n");
+		printf("%3s||%10s","pf", str);
+	printf("||");
+	printf(str, &n);
+	printf("||\n");
+
 	ft_printf("----------------------------------------------\n");
 		i++;
 	str = "%.5p";
 	n = 10;
-	ft_printf(" %d ||%10s ", i, str);
+	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
 	ft_printf(str, &n);
 	ft_printf("||\n");
+		printf("%3s||%10s","pf", str);
+	printf("||");
+	printf(str, &n);
+	printf("||\n");
+
 	ft_printf("----------------------------------------------\n");
 		i++;
 	str = "%.16p";
 	n = 10;
-	ft_printf(" %d ||%10s ", i, str);
+	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
 	ft_printf(str, &n);
 	ft_printf("||\n");
+		printf("%3s||%10s","pf", str);
+	printf("||");
+	printf(str, &n);
+	printf("||\n");
+
 	ft_printf("----------------------------------------------\n");
 
 i++;
 	str = "%15p";
 	n = 123456789;
-	ft_printf(" %d ||%10s ", i, str);
+	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
 	ft_printf(str, &n);
 	ft_printf("||\n");
-// 3
+	printf("%3s||%10s","pf", str);
+	printf("||");
+	printf(str, &n);
+	printf("||\n");
+
+	// 3
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%-19p";
 	n = 10;
-	ft_printf(" %d ||%10s ", i, str);
+	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
 	ft_printf(str, &n);
 	ft_printf("||\n");
-// 4
+	printf("%3s||%10s","pf", str);
+	printf("||");
+	printf(str, &n);
+	printf("||\n");
+
+	// 4
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%19p";
 	n = 10;
-	ft_printf(" %d ||%10s ", i, str);
+	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
 	ft_printf(str, &n);
 	ft_printf("||\n");
+	printf("%3s||%10s","pf", str);
+	printf("||");
+	printf(str, &n);
+	printf("||\n");
+
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%.12p";
 	n = 10;
-	ft_printf(" %d ||%10s ", i, str);
+	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
 	ft_printf(str, NULL);
 	ft_printf("||\n");
+	printf("%3s||%10s","pf", str);
+	printf("||");
+	printf(str, NULL);
+	printf("||\n");
+
 	ft_printf("----------------------------------------------\n");
 	i++;
 	str = "%p";
 	n = 10;
-	ft_printf(" %d ||%10s ", i, str);
+	ft_printf(" %d ||%10s", i, str);
 	ft_printf("||");
 	ft_printf(str, NULL);
 	ft_printf("||\n");
+	printf("%3s||%10s","pf", str);
+	printf("||");
+	printf(str, NULL);
+	printf("||\n");
+
 	ft_printf("----------------------------------------------\n");
 
 	return (0);
