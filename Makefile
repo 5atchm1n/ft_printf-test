@@ -6,7 +6,7 @@
 #    By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/18 06:45:17 by sshakya           #+#    #+#              #
-#    Updated: 2021/02/08 03:23:15 by sshakya          ###   ########.fr        #
+#    Updated: 2021/02/09 00:39:42 by sshakya          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,17 +57,17 @@ CFLAGS	= -Wall -Wextra -Werror -g
 
 MEM = -fsanitize=address
 
-TEST1 = test_mypf_int.c
+TESTINT = test_mypf_int.c
 
-TEST4 = test_mypf_str.c
+TESTSTR = test_mypf_str.c
 
-TEST2 = test_mypf_hexp.c
+TESTHEXP = test_mypf_hexp.c
 
-TEST3 = test_mypf_fge.c
+TESTF = test_mypf_f.c
 
-TEST5 = test_mypf_f.c
+TESTG = test_mypf_g.c
 
-TEST6 = test_mypf_g.c
+TESTE = test_mypf_e.c
 
 TESTSPLT =	../srcs/pf_split.c test_pfsplit.c ../srcs/ft_printf_utils.c \
 			../srcs/ft_printf_utils_2.c
@@ -84,18 +84,6 @@ TESTLST = test_setlst2.c ../srcs/pf_split.c ../srcs/pf_setlst.c \
 		  ../srcs/pf_flagargs.c ../srcs/pf_setargs.c ../srcs/pf_flag_utils.c \
 		  ../srcs/pf_print_utils.c
 
-TESTPF = test_printf.c
-
-TESTPF2 = test_printf2.c
-
-TESTPF3 = test_printf3.c
-
-TESTPF4 = test_printf4.c
-
-TESTPF5 = test_printf5.c
-
-TESTMYPF = test_mypf.c
-
 $(NAME) : ${OBJS} ${INCLUDE}
 	ar rcs $@ $?
 
@@ -111,22 +99,22 @@ fclean : clean
 	${RM} ${NAME}
 
 test-int:
-	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TEST1} && ./a.out
+	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TESTINT} && ./a.out
 
 test-str:
-	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TEST4} && ./a.out
+	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TESTSTR} && ./a.out
 
 test-hexp:
-	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TEST2} && ./a.out
-
-test-fge:
-	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TEST3} && ./a.out
+	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TESTHEXP} && ./a.out
 
 test-f:
-	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TEST5} && ./a.out
+	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TESTF} && ./a.out
 
 test-g:
-	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TEST6} && ./a.out
+	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TESTG} && ./a.out
+
+test-e:
+	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${BONUS} ${TESTE} && ./a.out
 
 testsplit:
 	${CC} ${CFLAGS} ${MEM} ${TESTSPLT} && ./a.out
@@ -154,9 +142,6 @@ testpf-hex:
 
 testpf-str:
 	${CC} ${CFLAGS} ${MEM} ${INCLUDE} ${TESTPF5} && ./a.out
-
-testmypf:
-	${CC} ${CFLAGS} ${INCLUDE} ${SRCS} ${TESTMYPF} && ./a.out
 
 norm :
 	~/.norminette/norminette.rb ${SRCS1} ${SRCS2} ${BONUS} ${INCLUDE}
