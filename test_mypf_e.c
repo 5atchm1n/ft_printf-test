@@ -6,7 +6,7 @@
 /*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 08:54:28 by sshakya           #+#    #+#             */
-/*   Updated: 2021/02/09 01:46:49 by sshakya          ###   ########.fr       */
+/*   Updated: 2021/02/10 02:34:18 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1302,6 +1302,25 @@ str = "%e";
 	n = printf(str, 5, fl5);
 	printf("||");
 	printf("%i||\n", n);
+	int z = 4;
+	int w = 10;
+	fl5 = 1.80018001800;
+	while (w > 0)
+	{
+		str = "%0*.*e";
+		printf("=> %.10f | w = %d | p = %d\n", fl5, w, z);
+		ft_printf(" %d ||%10s", 1, str);
+		ft_printf("||");
+		n = ft_printf(str, w, z, fl5);
+		ft_printf("||");
+		ft_printf("%i||\n", n);
+		printf(" %d ||%10s", 1, str);
+		printf("||");
+		n = printf(str, w, z, fl5);
+		printf("||");
+		printf("%i||\n", n);
+		w--;
+	}
 
 
 	return (0);

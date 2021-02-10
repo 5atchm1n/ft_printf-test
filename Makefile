@@ -6,7 +6,7 @@
 #    By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/18 06:45:17 by sshakya           #+#    #+#              #
-#    Updated: 2021/02/09 00:39:42 by sshakya          ###   ########.fr        #
+#    Updated: 2021/02/09 03:39:40 by sshakya          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRCS =	../ft_printf.c \
 BONUS = ../bonus/pf_printfloat_bonus.c \
 		../bonus/pf_convert_f_bonus.c \
 		../bonus/pf_convertfloat_fg_bonus.c \
+		../bonus/pf_convertfloat_eg_bonus.c \
 		../bonus/pf_convert_g_bonus.c \
 		../bonus/pf_convert_e_bonus.c \
 		../bonus/pf_float_utils_bonus.c \
@@ -54,6 +55,18 @@ BONUSOBJS = ${BONUS.c=.o}
 CC = clang
 
 CFLAGS	= -Wall -Wextra -Werror -g
+
+TESTPF = test_printf.c	
+
+TESTPF2 = test_printf2.c	
+
+TESTPF3 = test_printf3.c	
+
+TESTPF4 = test_printf4.c	
+
+TESTPF5 = test_printf5.c	
+
+TESTMYPF = test_mypf.c
 
 MEM = -fsanitize=address
 
